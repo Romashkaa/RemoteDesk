@@ -1,0 +1,1 @@
+[main_image](https://github.com/Romashkaa/RemoteDesk/blob/images/main_image.png)
