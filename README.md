@@ -1,1 +1,1 @@
-[main_image](https://github.com/Romashkaa/RemoteDesk/blob/images/main_image.png)
+![main_image](https://github.com/Romashkaa/RemoteDesk/blob/main/images/main_image.png?raw=true)
