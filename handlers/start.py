@@ -22,19 +22,19 @@ class StartHandler(telekit.Handler):
             "↗️": self.wrap(input_ctrl.move_up_right),
 
             "⬅️": self.wrap(input_ctrl.move_left),
-            "🫵": self.wrap(input_ctrl.click),
+            "Click": self.wrap(input_ctrl.click),
             "➡️": self.wrap(input_ctrl.move_right),
 
             "↙️": self.wrap(input_ctrl.move_down_left),
             "⬇️": self.wrap(input_ctrl.move_down),
             "↘️": self.wrap(input_ctrl.move_down_right),
 
-            "Default": self.wrap(self.modify_cursor_speed, 0),
-            "🐇": self.wrap(self.modify_cursor_speed, 5),
-            "🐢": self.wrap(self.modify_cursor_speed, -5),
+            "Slower": self.wrap(self.modify_cursor_speed, -5),
+            "Faster": self.wrap(self.modify_cursor_speed, 5),
+            "Default Speed": self.wrap(self.modify_cursor_speed, 0),
 
-            "Screenshot 👀": self.wrap(self.attach_photo),
-            "Type ⌨️": self.type_text
+            "Screenshot": self.wrap(self.attach_photo),
+            "Type": self.type_text
         }
         self.update()
 
