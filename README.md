@@ -4,7 +4,6 @@ RemoteDesk is a lightweight Telegram bot that lets you remotely control your **k
 
 ## Features
 - Instant screenshots
-- OCR text extraction
 - Simple Telegram interface
 - Minimal setup, works out of the box
 
