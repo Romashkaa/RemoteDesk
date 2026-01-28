@@ -1,15 +1,15 @@
 # RemoteDesk
 
-RemoteDesk is a lightweight Telegram bot that lets you remotely control your **keyboard** and **mouse**, as well as capture screenshots when needed.  
+RemoteDesk is a lightweight Telegram bot that lets you remotely control your **keyboard** and **mouse**, as well as capture screenshots whenever you need.  
+
+I use it to **pause movies using my phone** without getting up — it’s super handy!
 
 ## Features
 - Instant screenshots
 - Simple Telegram interface
 - Minimal setup, works out of the box
 
----
-
-## Installation
+# Installation
 
 Clone the repository:
 
@@ -24,8 +24,6 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
----
-
 ## Environment Variables
 
 Create a `.env` file:
@@ -37,17 +35,18 @@ ADMIN=YOUR_TELEGRAM_USER_ID
 SCREENSHOT_PATH=media/screenshot.png
 ```
 
----
-
-## Run the bot
+# Run the bot
 
 ```bash
 python main.py
 ```
 
----
-
 ## Gallery
-![main_image](https://github.com/Romashkaa/RemoteDesk/blob/main/images/main_image.png?raw=true)
-![main_image](https://github.com/Romashkaa/RemoteDesk/blob/main/images/screenshot_image.png?raw=true)
-![main_image](https://github.com/Romashkaa/RemoteDesk/blob/main/images/typing_image.png?raw=true)
+
+<table>
+  <tr>
+    <td><img src="https://github.com/Romashkaa/RemoteDesk/blob/main/images/main_image.png?raw=true" alt="Main Image" width="35"></td>
+    <td><img src="https://github.com/Romashkaa/RemoteDesk/blob/main/images/screenshot_image.png?raw=true" alt="Screenshot" width="35"></td>
+    <td><img src="https://github.com/Romashkaa/RemoteDesk/blob/main/images/typing_image.png?raw=true" alt="Typing" width="35"></td>
+  </tr>
+</table>
