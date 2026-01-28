@@ -1,6 +1,6 @@
 import telekit
 
-from telekit.styles import * # type: ignore
+from telekit.styles import * # pyright: ignore[reportWildcardImportFromLibrary]
 
 import screenshot
 import input_controller
@@ -16,31 +16,31 @@ class StartHandler(telekit.Handler):
 
     def handle(self) -> None:
         self.chain.disable_timeout_warnings()
-        self.main_keyboard = { # optimization
-            "↖️": self.wrap(input_ctrl.move_up_left),
-            "⬆️": self.wrap(input_ctrl.move_up),
-            "↗️": self.wrap(input_ctrl.move_up_right),
+        self.main_keyboard = {
+            "↖️": self.freeze(input_ctrl.move_up_left),
+            "⬆️": self.freeze(input_ctrl.move_up),
+            "↗️": self.freeze(input_ctrl.move_up_right),
 
-            "⬅️": self.wrap(input_ctrl.move_left),
-            "Click": self.wrap(input_ctrl.click),
-            "➡️": self.wrap(input_ctrl.move_right),
+            "⬅️": self.freeze(input_ctrl.move_left),
+            "Click": self.freeze(input_ctrl.click),
+            "➡️": self.freeze(input_ctrl.move_right),
 
-            "↙️": self.wrap(input_ctrl.move_down_left),
-            "⬇️": self.wrap(input_ctrl.move_down),
-            "↘️": self.wrap(input_ctrl.move_down_right),
+            "↙️": self.freeze(input_ctrl.move_down_left),
+            "⬇️": self.freeze(input_ctrl.move_down),
+            "↘️": self.freeze(input_ctrl.move_down_right),
 
-            "Slower": self.wrap(self.modify_cursor_speed, -5),
-            "Faster": self.wrap(self.modify_cursor_speed, 5),
-            "Default Speed": self.wrap(self.modify_cursor_speed, 0),
+            "Slower": self.freeze(self.modify_cursor_speed, -5),
+            "Faster": self.freeze(self.modify_cursor_speed, 5),
+            "Default Speed": self.freeze(self.modify_cursor_speed, 0),
 
-            "Screenshot": self.wrap(self.attach_photo),
-            "Type": self.type_text
+            "Screenshot": self.freeze(self.attach_photo),
+            "Write": self.type_text
         }
         self.update()
 
     def update(self) -> None:
         with self.chain.sender as sender:
-            sender.set_title("🧑‍💻 Your Mac is connected")
+            sender.set_title("🧑‍💻 Your PC is connected")
             sender.set_message(
                 f"{Bold("Cursor Speed")} – {int(input_ctrl.speed)}",
             )
@@ -50,13 +50,6 @@ class StartHandler(telekit.Handler):
             self.main_keyboard, row_width=3
         )
         self.chain.edit()
-
-    def wrap(self, func, *args):
-        def wrapper():
-            func(*args)
-            self.update()
-
-        return wrapper
 
     def attach_photo(self):
         screenshot.make_screenshot(config.SCREENSHOT_PATH)
