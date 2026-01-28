@@ -45,8 +45,8 @@ python main.py
 
 <table>
   <tr>
-    <td><img src="https://github.com/Romashkaa/RemoteDesk/blob/main/images/main_image.png?raw=true" alt="Main Image" width="35"></td>
-    <td><img src="https://github.com/Romashkaa/RemoteDesk/blob/main/images/screenshot_image.png?raw=true" alt="Screenshot" width="35"></td>
-    <td><img src="https://github.com/Romashkaa/RemoteDesk/blob/main/images/typing_image.png?raw=true" alt="Typing" width="35"></td>
+    <td><img src="https://github.com/Romashkaa/RemoteDesk/blob/main/images/main_image.png?raw=true" alt="Main Image" width="350"></td>
+    <td><img src="https://github.com/Romashkaa/RemoteDesk/blob/main/images/screenshot_image.png?raw=true" alt="Screenshot" width="350"></td>
+    <td><img src="https://github.com/Romashkaa/RemoteDesk/blob/main/images/typing_image.png?raw=true" alt="Typing" width="350"></td>
   </tr>
 </table>
